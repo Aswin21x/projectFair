@@ -9,12 +9,9 @@ import { loginAPI, registerAPI } from '../services/allApi';
 import { Spinner } from 'react-bootstrap';
 import { tokenAuthContext } from '../Context/TokenAuth';
 
-
-
-
 function Auth({insideRegister}) {
 
-  const [isAuthorized,setIsAuthorized]=useContext(tokenAuthContext)
+  const {isAuthorized,setIsAuthorized}= useContext(tokenAuthContext)
 
   const [loginStatus, setLoginStatus] = useState(false)
   const navigate = useNavigate()
